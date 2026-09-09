@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "designwright",
+  "version": "0.1.0",
+  "description": "Evidence-first, project-adaptive design workflow skills for agent clients.",
+  "author": {
+    "name": "wkimball1"
+  },
+  "repository": "https://github.com/wkimball1/designwright",
+  "keywords": [
+    "design",
+    "design-systems",
+    "evidence",
+    "ux",
+    "agent-skills"
+  ]
+}
