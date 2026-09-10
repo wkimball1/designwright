@@ -12,7 +12,7 @@ This package provides exactly five portable Agent Skills:
 - `designwright-evidence-loop` runs the bounded design-to-verification workflow.
 - `designwright-independent-critique` gives a separate reviewer a structured critique and closure contract.
 
-Skills are discovered from the immediate child directories of `skills/`. The package contains no MCP server, native Hermes `plugin.yaml`, Python tool handler, remote service, credential, telemetry, or client-specific extension. The only portable component type shipped in v0.1.0 is Agent Skills.
+Skills are discovered from the immediate child directories of `skills/`. The package contains no MCP server, native Hermes `plugin.yaml`, Python tool handler, remote service, credential, telemetry, or client-specific extension. The only portable component type shipped in v0.1.1 is Agent Skills.
 
 The workflow is project-adaptive: project identity, canonical design memory, local components, tokens, constraints, and human decisions outrank central guidance. Component discovery always follows:
 
@@ -33,14 +33,28 @@ The first command checks the manifest values, the exact five skills, frontmatter
 
 ## Install and enable with Hermes
 
-Install the public GitHub repository as a disabled portable plugin, then enable it only after reviewing the package:
+Install a reviewed, immutable Git commit as a disabled portable plugin. Read the package back with Plugin Doctor before enabling it:
 
 ```text
-hermes plugins install wkimball1/designwright --no-enable
+hermes plugins install wkimball1/designwright --ref <reviewed-commit> --no-enable
+hermes plugins doctor --ci <installed-package-directory>
 hermes plugins enable designwright
 ```
 
-`--no-enable` is intentional. Installation and enabling are separate decisions. The package does not request tool overrides or any additional capability.
+`--ref <reviewed-commit>` and `--no-enable` are intentional. Installation, read-back, and enabling are separate decisions. The package does not request tool overrides or any additional capability. Updating a plugin is another reviewed installation decision; do not use a generic updater or assume marketplace/client refresh behavior.
+
+## Comparative external references
+
+The Direction skill can use an owner-authorized external design-reference collection to inform a project-owned initial `DESIGN.md`. It does not import a brand system or turn a reference library into a theme selector.
+
+- record an immutable source pin plus license/permission evidence before using it;
+- fail closed if source provenance, authorship, or permission cannot be verified;
+- retain only original, principle-level observations outside the target `DESIGN.md`;
+- require project evidence, an original transformation, and an acceptance gate for every material influence;
+- cap each reference to one adopted principle and at most one third of the packet's influence;
+- require an independent, blind origin check before the resulting `DESIGN.md` can guide implementation.
+
+See `skills/designwright-direction/references/comparative-reference-intake.md` for the complete protocol. It forbids reference-specific tokens, fonts, assets, copy, code, component APIs, signature layouts, and interaction patterns even when a project owner documents a separate broader right.
 
 ## Designwright and Design Studio are separate
 
