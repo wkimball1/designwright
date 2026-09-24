@@ -1,18 +1,20 @@
 # Designwright Agent Plugins v1
 
-Designwright is a skills-first package in the portable Agent Plugins v1 format. It carries a reusable design workflow without selecting a renderer, changing a product repository, or claiming public name, trademark, domain, or package-name clearance.
+Designwright is a skills-first package in the portable Agent Plugins v1 format. It carries reusable design and video-direction workflows without selecting a renderer, changing a product repository, or claiming public name, trademark, domain, or package-name clearance.
 
 ## Package boundary
 
-This package provides exactly five portable Agent Skills:
+This package provides exactly seven portable Agent Skills:
 
 - `designwright-init` maps a project and proposes metadata without editing product code.
 - `designwright-direction` turns project evidence and user goals into an approved design direction.
 - `designwright-component-intelligence` records ordered, evidence-backed component selection.
 - `designwright-evidence-loop` runs the bounded design-to-verification workflow.
 - `designwright-independent-critique` gives a separate reviewer a structured critique and closure contract.
+- `designwright-video-direction` turns approved research and channel evidence into a provider-agnostic video production contract.
+- `designwright-video-critique` independently reviews rendered audiovisual evidence with timestamped findings and verifier handoff.
 
-Skills are discovered from the immediate child directories of `skills/`. The package contains no MCP server, native Hermes `plugin.yaml`, Python tool handler, remote service, credential, telemetry, or client-specific extension. The only portable component type shipped in v0.1.1 is Agent Skills.
+Skills are discovered from the immediate child directories of `skills/`. The package contains no MCP server, native Hermes `plugin.yaml`, Python tool handler, remote service, credential, telemetry, or client-specific extension. The only portable component type shipped in v0.2.0 is Agent Skills.
 
 The workflow is project-adaptive: project identity, canonical design memory, local components, tokens, constraints, and human decisions outrank central guidance. Component discovery always follows:
 
@@ -29,7 +31,7 @@ python tools/validate_portable_plugin.py
 hermes plugins doctor --ci .
 ```
 
-The first command checks the manifest values, the exact five skills, frontmatter name matches, and the deliberate absence of MCP, native-plugin, and workflow files. The Hermes command exercises the installed runtime's portable-plugin validation. Both are intended to run locally; this bootstrap intentionally adds no GitHub Actions workflow.
+The first command checks the manifest values, the exact seven skills, frontmatter name matches, and the deliberate absence of MCP, native-plugin, and workflow files. The Hermes command exercises the installed runtime's portable-plugin validation. Both are intended to run locally; this bootstrap intentionally adds no GitHub Actions workflow.
 
 ## Install and enable with Hermes
 
@@ -72,3 +74,15 @@ Use the skills as a bounded sequence rather than as a visual-theme generator:
 6. Fix only accepted findings, then verify from clean instructions.
 
 A screenshot alone is not proof. Material work separates implementer, critic, and verifier roles, uses actionable evidence, and limits critique/fix churn.
+
+
+## Video Studio foundation
+
+Designwright v0.2.0 adds two provider-agnostic video skills while keeping production engines external:
+
+- `designwright-video-direction` creates the approved production, scene, shot, voice, evidence, privacy, and cost contract.
+- `designwright-video-critique` independently evaluates rendered audio/video evidence and produces timestamped, bounded findings for a separate verifier.
+
+The subsystem is specified in `docs/video-studio/`. It prefers qualified free/local capabilities before paid providers, keeps public publishing behind an explicit human boundary, and does not bundle a renderer, TTS engine, transcription engine, generative-media model, upload service, or provider credential.
+
+The existing evidence-first separation remains: Designwright decides what good looks like and verifies evidence; replaceable external adapters perform production work.
