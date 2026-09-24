@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "designwright",
-  "version": "0.1.1",
-  "description": "Evidence-first, project-adaptive design workflow skills for agent clients.",
+  "version": "0.2.0",
+  "description": "Evidence-first, project-adaptive design and video-direction workflow skills for agent clients.",
   "author": {
     "name": "wkimball1"
   },
@@ -12,6 +12,7 @@
     "design-systems",
     "evidence",
     "ux",
+    "video",
     "agent-skills"
   ]
 }
