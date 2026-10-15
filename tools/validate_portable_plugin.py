@@ -14,7 +14,7 @@ SCHEMA_URL = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
 EXPECTED_MANIFEST = {
     "$schema": SCHEMA_URL,
     "name": "designwright",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Evidence-first, project-adaptive design and video-direction workflow skills for agent clients.",
     "author": {"name": "wkimball1"},
     "repository": "https://github.com/wkimball1/designwright",
@@ -24,8 +24,11 @@ REQUIRED_SKILLS = {
     "designwright-init",
     "designwright-direction",
     "designwright-component-intelligence",
+    "designwright-data-density",
     "designwright-evidence-loop",
     "designwright-independent-critique",
+    "designwright-ui-loop",
+    "designwright-verify-visual",
     "designwright-video-direction",
     "designwright-video-critique",
 }
@@ -73,7 +76,7 @@ def _check_manifest(manifest: dict[str, Any], errors: list[str]) -> None:
         if unexpected:
             errors.append(f"plugin.json has unexpected fields: {', '.join(unexpected)}")
     if manifest != EXPECTED_MANIFEST:
-        errors.append("plugin.json fields or values do not match the Designwright 0.2.0 contract")
+        errors.append("plugin.json fields or values do not match the Designwright 0.3.0 contract")
 
     name = manifest.get("name")
     if isinstance(name, str):
@@ -182,8 +185,8 @@ def main() -> int:
         print(f"Portable plugin validation failed with {len(errors)} error(s).", file=sys.stderr)
         return 1
 
-    print("PASS: plugin.json manifest matches the Designwright 0.2.0 contract")
-    print("PASS: seven required Agent Skills have matching frontmatter names")
+    print("PASS: plugin.json manifest matches the Designwright 0.3.0 contract")
+    print("PASS: ten required Agent Skills have matching frontmatter names")
     print("PASS: no MCP, native Hermes, or GitHub workflow content is present")
     print("Portable plugin validation passed.")
     return 0

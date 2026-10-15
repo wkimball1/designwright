@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0
+
+- Added `designwright-ui-loop`: the standardized UI build conveyor — surface-mode picker, direction, component selection, craft gate, independent critique, visual verification, and decision log. Your agents' default UI process.
+- Added `designwright-verify-visual`: browser-screenshot verification loop at the viewport matrix (390/768/1440, light + dark), selecting the client's Playwright MCP. No renderer or MCP server is bundled.
+- Added `designwright-data-density`: production checklist for data-dense screens — tables, loading/empty/error/partial states, scale strategy, annotated charts, keyboard access.
+- Added `templates/design-tokens.template.json`: shared cross-project token starting point (color roles, three type roles, spacing rhythm, radii; light + dark).
+- Added the `.design/decisions.md` decision-log convention so future sessions read settled UI decisions instead of re-litigating them.
+- Preserved the portable plugin boundary: no renderer, MCP server, provider credential, remote service, or publishing runtime is bundled.
+- Updated local validation to enforce exactly ten approved Agent Skills and the Designwright 0.3.0 manifest.
+
 ## 0.2.0
 
 - Added `designwright-video-direction` for provider-agnostic, evidence-backed video production contracts.

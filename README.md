@@ -4,11 +4,14 @@ Designwright is a skills-first package in the portable Agent Plugins v1 format. 
 
 ## Package boundary
 
-This package provides exactly seven portable Agent Skills:
+This package provides exactly ten portable Agent Skills:
 
 - `designwright-init` maps a project and proposes metadata without editing product code.
 - `designwright-direction` turns project evidence and user goals into an approved design direction.
 - `designwright-component-intelligence` records ordered, evidence-backed component selection.
+- `designwright-ui-loop` runs the standardized UI build conveyor: surface mode, direction, component selection, craft gate, independent critique, visual verification, decision log.
+- `designwright-verify-visual` verifies built UI with real browser screenshots at the viewport matrix — it selects the client's Playwright MCP and bundles no renderer.
+- `designwright-data-density` keeps data-dense screens production-ready: tables, states, scale, charts, keyboard access.
 - `designwright-evidence-loop` runs the bounded design-to-verification workflow.
 - `designwright-independent-critique` gives a separate reviewer a structured critique and closure contract.
 - `designwright-video-direction` turns approved research and channel evidence into a provider-agnostic video production contract.
@@ -31,7 +34,7 @@ python tools/validate_portable_plugin.py
 hermes plugins doctor --ci .
 ```
 
-The first command checks the manifest values, the exact seven skills, frontmatter name matches, and the deliberate absence of MCP, native-plugin, and workflow files. The Hermes command exercises the installed runtime's portable-plugin validation. Both are intended to run locally; this bootstrap intentionally adds no GitHub Actions workflow.
+The first command checks the manifest values, the exact ten skills, frontmatter name matches, and the deliberate absence of MCP, native-plugin, and workflow files. The Hermes command exercises the installed runtime's portable-plugin validation. Both are intended to run locally; this bootstrap intentionally adds no GitHub Actions workflow.
 
 ## Install and enable with Hermes
 
