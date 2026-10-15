@@ -1,6 +1,6 @@
 ---
 name: designwright-ui-loop
-description: Run the standardized UI build loop end to end: pick a surface mode, build through the designwright skills, pass the craft gate, take an independent critique, verify visually, and log decisions. Use for ANY UI task — dashboards, admin tools, landing pages, components, settings screens.
+description: "Run the standardized UI build loop end to end: pick a surface mode, build through the designwright skills, pass the craft gate, take an independent critique, verify visually, and log decisions. Use for ANY UI task."
 license: MIT
 ---
 

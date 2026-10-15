@@ -1,6 +1,6 @@
 ---
 name: designwright-data-density
-description: Design or review data-dense UI: tables, dashboards, and screens where data is the interface. Covers density, empty/loading/error states, truncation, sorting and filtering, pagination, keyboard access, and chart annotation. Use for any screen dominated by data.
+description: "Design or review data-dense UI: tables, dashboards, and screens where data is the interface. Covers density, states, truncation, sorting and filtering, pagination, keyboard access, and chart annotation."
 license: MIT
 ---
 
